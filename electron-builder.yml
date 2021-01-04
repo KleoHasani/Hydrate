@@ -1,0 +1,39 @@
+productName: "Hydrate"
+appId: "com.hydrate.app"
+asar: true
+win:
+  icon: "icons/win/icon.ico"
+  target:
+    - nsis
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: "icons/win/install.ico"
+  uninstallerIcon: "icons/win/uninstall.ico"
+  license: "LICENSE"
+  deleteAppDataOnUninstall: true
+  runAfterFinish: false
+  createDesktopShortcut: false
+  createStartMenuShortcut: true
+  shortcutName: "Hydrate"
+
+linux:
+  target: deb
+  executableName: "Hydrate"
+  icon: "icons/mac/icon.icns"
+  maintainer: Kleo Hasani
+  category: "Utility"
+deb:
+  depends:
+    [
+      "gconf2",
+      "gconf-service",
+      "libnotify4",
+      "libappindicator1",
+      "libxtst6",
+      "libnss3",
+    ]
+
+directories:
+  output: "build"

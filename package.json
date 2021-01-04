@@ -1,0 +1,24 @@
+{
+  "name": "hydrate",
+  "appId": "com.hydrate.app",
+  "productName": "Hydrate",
+  "icon": "./icons/png/128x128.png",
+  "version": "1.0.2",
+  "description": "Stay hydrated! A tray application to remind you to drink water.",
+  "main": "./src/app.js",
+  "scripts": {
+    "clean": "rm -rf ./node_modules && rm -rf ./build",
+    "start": "electron .",
+    "build": "electron-builder --config electron-builder.yml",
+    "test": "jest"
+  },
+  "author": "Kleo Hasani",
+  "email": "email@email.com",
+  "url": "https://github.com/KleoHasani/Hydrate",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.1.2",
+    "electron-builder": "^22.9.1",
+    "jest": "^26.5.3"
+  }
+}
