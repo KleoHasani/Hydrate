@@ -24,7 +24,9 @@ npm start
 
 ## Required
 
-Electron v10.1.3
+Electron v9.1.2
+
+Electron Builder v22.9.1
 
 Node v12.19.0
 
