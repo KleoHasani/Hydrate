@@ -35,6 +35,7 @@ NPM v6.14.7
 ## Build With
 
 Electron v11.3.0
+
 Electron Builder v26.6.3
 
 Build:
