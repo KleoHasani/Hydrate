@@ -50,6 +50,7 @@ build/_installer_.exe
 Debian:
 
 build/_installer_.deb
+
 build/_installer_.AppImage
 
 ## Version
