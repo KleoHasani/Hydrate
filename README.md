@@ -68,6 +68,7 @@ Kleo Hasani
 [X] Debian 10
 
 Support for:
+
 [X] AppImage
 
 **Thank You**
