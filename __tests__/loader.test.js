@@ -1,7 +1,7 @@
-const { loadView, appIcon, trayIcon } = require("../src/loader");
+const { loadView, loadIcon, loadTray } = require("../src/loader");
 
 describe("LOADER", () => {
-  it('loadview() - Should return a string containing "../views/index.html"', () => {
+  it('loadview("index") - Should return a string containing "../views/index.html"', () => {
     const view = loadView("index");
     const regex = /^([a-zA-Z]:)?((\\)+|(\/)+)(\w+((\\)+|(\/)+))+index.html$/g;
     expect(typeof view).toBe("string");
@@ -9,17 +9,17 @@ describe("LOADER", () => {
     expect(view).toMatch("index.html");
   });
 
-  it('appIcon - Should return a string containing "../icons/*/icon or 256x256.*"', () => {
-    const regex = /^([a-zA-Z]:)?((\\)+|(\/)+)(\w+((\\)+|(\/)+))+([0-9]*x[0-9]*)?|(icon)?.(png|ico|icns)$/g;
+  it('loadIcon - Should return a string containing "../icons/*/icon.*"', () => {
+    const regex = /^([a-zA-Z]:)?((\\)+|(\/)+)(\w+((\\)+|(\/)+))+(icon)?.(png|ico|icns)$/g;
+    const appIcon = loadIcon();
     expect(typeof appIcon).toBe("string");
     expect(new RegExp(regex).test(appIcon)).toBe(true);
-    expect(appIcon).toMatch("256x256.png");
   });
 
-  it('trayIcon - Should return a string containing "../icons/*/icon or 32x32.*"', () => {
-    const regex = /^([a-zA-Z]:)?((\\)+|(\/)+)(\w+((\\)+|(\/)+))+([0-9]*x[0-9]*)?|(icon)?.(png|ico|icns)$/g;
+  it('loadTray - Should return a string containing "../icons/*/icon.*"', () => {
+    const regex = /^([a-zA-Z]:)?((\\)+|(\/)+)(\w+((\\)+|(\/)+))+(tray)?.(png)$/g;
+    const trayIcon = loadTray();
     expect(typeof trayIcon).toBe("string");
     expect(new RegExp(regex).test(trayIcon)).toBe(true);
-    expect(trayIcon).toMatch("32x32.png");
   });
 });

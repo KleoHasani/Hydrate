@@ -25,18 +25,7 @@ const menu = Menu.buildFromTemplate([
     },
   },
   {
-    label: "20 Mins",
-    type: "radio",
-    click: () => {
-      ipcMain.emit("timeout_change", 20);
-    },
-  },
-  {
-    label: "1 Min",
-    type: "radio",
-    click: () => {
-      ipcMain.emit("timeout_change", 1);
-    },
+    type: "separator",
   },
   {
     role: "quit",

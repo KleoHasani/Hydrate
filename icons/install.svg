@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="icon.svg"
+   sodipodi:docname="install.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg8"
    version="1.1"
@@ -37,9 +37,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="941.72772"
-     inkscape:cx="588.47522"
-     inkscape:zoom="0.1767767"
+     inkscape:cy="979.24914"
+     inkscape:cx="1029.7636"
+     inkscape:zoom="0.35355339"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -67,19 +67,25 @@
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
+    <circle
+       style="fill:#008000;fill-rule:evenodd;stroke-width:1.00012"
+       id="path896"
+       cx="248.70833"
+       cy="248.70833"
+       r="248.70833" />
     <path
-       style="fill:#006680;stroke:#000000;stroke-width:0.288323px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 84.666667,52.916667 127,455.08333 H 380.99999 L 423.33332,52.916667 Z"
+       style="fill:#006680;stroke:#000000;stroke-width:0.257702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 99.32674,75.197369 137.12436,435.0307 H 363.91007 L 401.70769,75.197369 Z"
        id="path833" />
     <path
-       style="fill:#00aad4;stroke:#000000;stroke-width:0.271073px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 96.005946,63.5 39.498514,381 h 236.99107 l 39.49851,-381 z"
+       style="fill:#00aad4;stroke:#000000;stroke-width:0.242284px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 109.4511,84.666667 144.71763,425.5614 H 356.3168 L 391.58333,84.666667 Z"
        id="path833-3" />
     <text
        xml:space="preserve"
        id="text850"
        style="font-style:normal;font-weight:normal;font-size:176.389px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect852);fill:#000000;fill-opacity:1;stroke:none;"
-       transform="matrix(1.5153798,0,0,1.5368741,-54.989156,-38.946925)"><tspan
+       transform="matrix(1.3530177,0,0,1.3750979,-25.365963,-6.9963723)"><tspan
          x="137.58398"
          y="251.31293"><tspan
            style="fill:#00222b">H</tspan></tspan></text>

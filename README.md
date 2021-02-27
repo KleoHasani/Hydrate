@@ -34,12 +34,13 @@ NPM v6.14.7
 
 ## Build With
 
-Electron v10.1.3
+Electron v11.3.0
+Electron Builder v26.6.3
 
 Build:
 
 ```
-npm run build
+npm run dist
 ```
 
 Windows:
@@ -49,10 +50,11 @@ build/_installer_.exe
 Debian:
 
 build/_installer_.deb
+build/_installer_.AppImage
 
 ## Version
 
-1.0.2
+1.0.3
 
 ## Authors
 
@@ -62,6 +64,9 @@ Kleo Hasani
 
 [X] Windows 10
 
-[X] Ubuntu 20.10
+[X] Debian 10
+
+Support for:
+[X] AppImage
 
 **Thank You**

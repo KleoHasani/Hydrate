@@ -19,7 +19,7 @@ nsis:
   shortcutName: "Hydrate"
 
 linux:
-  target: deb
+  target: [deb, AppImage]
   executableName: "Hydrate"
   icon: "icons/mac/icon.icns"
   maintainer: Kleo Hasani
@@ -35,5 +35,6 @@ deb:
       "libnss3",
     ]
 
+files: ["!node_modules", "!__tests__", "!__mocks__", "!README.md"]
 directories:
-  output: "build"
+  output: "dist"

@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require("electron");
+const { app, BrowserWindow, ipcMain, nativeImage } = require("electron");
 
 const { Application } = require("./Application");
 const { Timeout } = require("./Timeout");
@@ -7,13 +7,15 @@ const { menu } = require("./menu");
 
 const { createNotification, createDialog, TDialog } = require("./Notification");
 
-const { appIcon, trayIcon } = require("./loader");
+const { loadTray, loadIcon } = require("./loader");
 
-let tray = null; // Persisit tray in memory
+let tray = null; // Persist tray in memory
+const tray_icon = nativeImage.createFromPath(loadTray());
+const app_icon = nativeImage.createFromPath(loadIcon());
 // Start timeout with default 30 minutes interval time.
 let timeout = new Timeout(30);
 
-// Quit app, clean interval timout
+// Quit app, clean interval timeout
 function exit() {
   if (timeout) {
     timeout.clearTimeoutInterval();
@@ -33,12 +35,12 @@ app
   .then(() => {
     // Create Application and create Tray applet.
     new Application();
-    tray = new Applet(trayIcon, menu);
-    // Notify app started succesfully.
+    tray = new Applet(tray_icon, menu);
+    // Notify app started successfully.
     createNotification(
       "Hydrate!",
       "Hydrate has started successfully!",
-      appIcon
+      app_icon
     ).show();
   })
   .catch((ex) => {
@@ -57,7 +59,7 @@ app.on("ready", () => {
   const notification = createNotification(
     "Hydrate!",
     "Don't forget to drink water!",
-    appIcon
+    app_icon
   );
 
   // Timeout changed listener
@@ -66,7 +68,7 @@ app.on("ready", () => {
     createNotification(
       "Hydrate!",
       `Time set to ${t} minute(s)`,
-      appIcon
+      app_icon
     ).show();
   });
 

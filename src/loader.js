@@ -1,56 +1,35 @@
-const { resolve, join } = require("path");
+const { resolve } = require("path");
 const { app } = require("electron");
 
-/**
- * @param {String} name
- */
-function loadView(name) {
-  if (process.env.NODE_ENV === "production") {
-    return process.platform === "win32"
-      ? resolve(
-          join(
-            app.getAppPath(),
-            "resources",
-            "app.asar",
-            "views",
-            `${name}.html`
-          )
-        )
-      : resolve(join(app.getAppPath(), "views", `${name}.html`));
-  } else {
-    return resolve(join(app.getAppPath(), "views", `${name}.html`));
-  }
-}
+const base = resolve(app.getAppPath());
 
-/**
- * @param {String} name
- */
-function load(name) {
-  if (process.env.NODE_ENV === "production") {
+module.exports = {
+  /**
+   * @param {string} name
+   * @returns {string}
+   */
+  loadView: (name) => {
+    return resolve(base, "views", `${name}.html`);
+  },
+
+  /**
+   * @returns {string}
+   */
+  loadIcon: () => {
     switch (process.platform) {
       case "win32":
-        return resolve(
-          join(
-            app.getAppPath(),
-            "resources",
-            "app.asar",
-            "icons/win",
-            "icon.ico"
-          )
-        );
+        return resolve(base, "icons", "win", "icon.ico");
       case "darwin":
-        return resolve(join(app.getAppPath(), "resources", "app.asar", "icons/mac", "icon.icns"));
-      case "linux":
-        return resolve(join(app.getAppPath(), "resources", "app.asar","icons/mac", "icon.icns"));
+        return resolve(base, "icons", "mac", "icon.icns");
       default:
-        return resolve(join(app.getAppPath(), "resources", "app.asar", "icons/png", "32x32.png"));
+        return resolve(base, "icons", "png", "icon.png");
     }
-  } else {
-    return resolve(join(app.getAppPath(), "icons/png", `${name}.png`));
-  }
-}
+  },
 
-const appIcon = load("256x256");
-const trayIcon = load("32x32");
-
-module.exports = { loadView, appIcon, trayIcon };
+  /**
+   * @returns {string}
+   */
+  loadTray: () => {
+    return resolve(base, "icons", "png", "tray.png");
+  },
+};

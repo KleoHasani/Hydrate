@@ -1,5 +1,4 @@
 const { Window } = require("./Window");
-const { appIcon } = require("./loader");
 
 // window settings
 const settings = {
@@ -8,20 +7,22 @@ const settings = {
   frame: false,
   show: false,
   movable: false,
-  transparent: false,
-  icon: appIcon,
+  transparent: true,
   webPreferences: {
-    nodeIntegration: false,
     webSecurity: true,
-    enableRemoteModule: false,
     contextIsolation: true,
     worldSafeExecuteJavaScript: true,
+    nodeIntegration: false,
+    nodeIntegrationInWorker: false,
+    enableRemoteModule: false,
+    allowRunningInsecureContent: false,
+    plugins: false,
+    experimentalFeatures: false,
   },
 };
 
 class Application extends Window {
   constructor() {
-    // Name of window (same name as the HTML file without extentions) and settings for the window
     super("index", settings);
   }
 }
