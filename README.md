@@ -45,13 +45,13 @@ npm run dist
 
 Windows:
 
-build/_installer_.exe
+dist/_installer_.exe
 
 Debian:
 
-build/_installer_.deb
+dist/_installer_.deb
 
-build/_installer_.AppImage
+dist/_installer_.AppImage
 
 ## Version
 
