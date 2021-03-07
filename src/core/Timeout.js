@@ -1,3 +1,5 @@
+"use strict";
+
 class Timeout {
   /**
    * @param {Number} time;
@@ -11,7 +13,7 @@ class Timeout {
    * @param {Number} time;
    * @param {Notification} notification;
    */
-  settimeoutLength(time, notification) {
+  setTimeoutLength(time, notification) {
     this.clearTimeoutInterval(this.id);
     this.length = 1000 * 60 * time;
     this.startTimeoutInterval(notification);

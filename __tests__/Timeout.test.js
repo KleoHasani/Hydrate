@@ -1,4 +1,6 @@
-const { Timeout } = require("../src/Timeout");
+"use strict";
+
+const { Timeout } = require("../src/core/Timeout");
 
 describe("TIMEOUT", () => {
   const timeout = new Timeout();
@@ -10,7 +12,7 @@ describe("TIMEOUT", () => {
   });
 
   it("Should set time out on 1000 * 60 * 60 and timeout.id should not be null", () => {
-    timeout.settimeoutLength(60);
+    timeout.setTimeoutLength(60);
     console.log(timeout.id);
     expect(timeout.length).toEqual(1000 * 60 * 60);
     expect(timeout.id).not.toBe(null);

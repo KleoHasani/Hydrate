@@ -1,7 +1,9 @@
+"use strict";
+
 const { Menu, ipcMain } = require("electron");
 
 // Tray Context Menu
-const menu = Menu.buildFromTemplate([
+const appletMenu = Menu.buildFromTemplate([
   {
     label: "2 Hours",
     type: "radio",
@@ -32,4 +34,4 @@ const menu = Menu.buildFromTemplate([
   },
 ]);
 
-module.exports = { menu };
+module.exports = { appletMenu };
