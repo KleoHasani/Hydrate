@@ -24,17 +24,15 @@ npm start
 
 ### Required
 
-Electron v9.1.2
+- Electron v12.0.0
 
-Electron Builder v22.9.1
+- Electron Builder v22.10.5
 
-Node v12.19.0
+- Node v12.19.0 or above
 
-NPM v6.14.7
+- NPM v6.14.7 or above
 
 ### Build With
-
-- Electron v12.0.0
 
 - Electron Builder v22.10.5
 
@@ -56,7 +54,7 @@ Debian:
 
 ## Version
 
-1.0.4
+v1.0.4
 
 ## Authors
 
