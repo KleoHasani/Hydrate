@@ -2,15 +2,15 @@ productName: "Hydrate"
 appId: "com.hydrate.app"
 asar: true
 win:
-  icon: "icons/win/icon.ico"
+  icon: "static/icons/win/icon.ico"
   target:
     - nsis
 nsis:
   oneClick: false
   perMachine: false
   allowToChangeInstallationDirectory: true
-  installerIcon: "icons/win/install.ico"
-  uninstallerIcon: "icons/win/uninstall.ico"
+  installerIcon: "static/icons/win/install.ico"
+  uninstallerIcon: "static/icons/win/uninstall.ico"
   license: "LICENSE"
   deleteAppDataOnUninstall: true
   runAfterFinish: false
@@ -21,7 +21,7 @@ nsis:
 linux:
   target: [deb, AppImage]
   executableName: "Hydrate"
-  icon: "icons/mac/icon.icns"
+  icon: "static/icons/mac/icon.icns"
   maintainer: Kleo Hasani
   category: "Utility"
 deb:
